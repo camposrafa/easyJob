@@ -37,4 +37,11 @@ interface JobRepository
      * @return boolean
      */
     public function destroy(Job $Job): bool;
+
+    /**
+     *
+     * @param array $filter
+     * @return array
+     */
+    public function summary(array $filter): array;
 }

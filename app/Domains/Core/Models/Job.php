@@ -3,13 +3,15 @@
 namespace App\Domains\Core\Models;
 
 use App\Domains\Core\Enum\Job\Status;
+use App\Domains\Core\Infra\Eloquent\Helper\Sortable;
 use Carbon\Carbon;
+use EloquentFilter\Filterable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Job extends Model
 {
-    use SoftDeletes;
+    use SoftDeletes, Filterable, Sortable;
 
         /**
      * @var array
